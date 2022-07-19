@@ -1,10 +1,21 @@
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="plugins/iCheck/icheck.min.js"></script>
+<script src="bower_components/sweetalert/sweetalert.js"></script>
+
+
 <?php 
-include_once 'header.php';
-include_once 'connection.php';
-session_start();
-if($_SESSION['useremail'] == ""){
+
+if($_SESSION['useremail'] == "" OR $_SESSION['role'] != "user") {
   header('location:index.php');
 }
+
+
+include_once 'header.php';
+
 ?>
 
   <!-- Content Wrapper. Contains page content -->
@@ -12,7 +23,7 @@ if($_SESSION['useremail'] == ""){
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Admin Dashboard
+        User Dashboard
         
       </h1>
       <ol class="breadcrumb">
@@ -23,7 +34,7 @@ if($_SESSION['useremail'] == ""){
 
     <!-- Main content -->
     <section class="content container-fluid">
-    
+
 
     </section>
     <!-- /.content -->
@@ -43,7 +54,12 @@ if($_SESSION['useremail'] == ""){
 
 <!-- REQUIRED JS SCRIPTS -->
 
-
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
