@@ -39,7 +39,7 @@ if(isset($_POST['btn_update'])) {
                     button: "Ok",  
                     });
                 });
-            </script>';
+              </script>';
             } else {
                 // error updating password to the data base
                 echo '<script type="text/javascript">
